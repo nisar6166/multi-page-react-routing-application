@@ -1,16 +1,35 @@
-# React + Vite
+# Multi-Page React Application: User Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application built to manage and view user information. This project demonstrates how to use **React Router** for seamless navigation between multiple pages and how to handle dynamic user data.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+**Vercel Link:** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+- **Home Page:** A welcoming landing page that explains the purpose of the User Directory.
+- **User List:** A dedicated page displaying a list of users (John Doe, Jane Smith, etc.).
+- **User Detail Page:** A dynamic route (`/users/:id`) that fetches the User ID from the URL and displays specific details like name and email.
+- **About Page:** Provides details about the application's objective and technology.
+- **Persistent Navigation:** A professional Navbar that stays at the top across all pages with active link highlighting.
+- **Go Back Functionality:** Easy navigation to return to the Home or Users list from any sub-page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- **React.js** (Functional Components & Hooks like `useParams`, `useNavigate`)
+- **React Router Dom v6** (For Routing)
+- **Tailwind CSS** (For Responsive Styling)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+```text
+src/
+├── components/
+│   └── Navbar.jsx      # Navigation links (Home, About, Users)
+├── pages/
+│   ├── Home.jsx        # Landing page
+│   ├── About.jsx       # App purpose & info
+│   ├── Users.jsx       # List of all users
+│   └── UserDetail.jsx  # Detailed view of a single user
+├── App.jsx             # Main routing configuration
+└── main.jsx            # Entry point
